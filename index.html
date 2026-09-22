@@ -6,54 +6,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"
+        integrity="sha512-8LENNbXmzI/Gbj+OwXmqR6V4QaUAw0/porPzy1+dQoJqC0JPHedWoe0DDOTL2uHA5XXJyIsPtiMHH86pVlay6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
-
-
     <header>
         <nav id="navbar">
-            <i class="fa-solid fa-breja" id="nav_Logo">Food</i>
+            <i class="fa-brands fa-untappd" id="nav_Logo">
+                <p>FOOD</p>
+            </i>
 
-            <ul id="nav_list">
-                <li class="nav-item">
+            <ul class="nav_list">
+                <li class="nav-item active">
                     <a href="#home">Início</a>
                 </li>
                 <li class="nav-item">
-                    <a href="menu">Cadápio</a>
+                    <a href="#menu">Cadápio</a>
                 </li>
                 <li class="nav-item">Avaliações</li>
             </ul>
 
-            <button class="btn-default">
+            <!-- Adicionado um ID para diferenciar do botão do mobile no CSS -->
+            <button id="desktop_btn" class="btn-default">
                 Peça aqui
             </button>
-            <button>
+
+            <button id="mobile_btn">
                 <i class="fa-solid fa-bars"></i>
             </button>
 
             <div id="mobile_menu">
-                <ul id="nav_list">
+                <ul class="mobile_nav_list">
                     <li class="nav-item">
                         <a href="#home">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a href="menu">Cadápio</a>
+                        <a href="#menu">Cadápio</a>
                     </li>
                     <li class="nav-item">Avaliações</li>
                 </ul>
+                <!-- Corrigido o erro de digitação de "btn-defaul" para "btn-default" -->
                 <button class="btn-default">
                     Peça aqui
                 </button>
             </div>
-
         </nav>
     </header>
+    <main id="content">
+        <section id="home">
+            
+            <div class="textos">
+                <h1>BREJAFOOD</h1>
+                <p>Somos um buteco artesanal, que oferece uma experiência gastronômica única,
+                    ao combinar sabores tradicionais com um toque moderno, proporcionando momentos de prazer e
+                    satisfação.
+                    Venha experimentar o melhor da culinária local!
+                </p>
+            </div>
 
+            <div id="cta_buttons">
 
+                <a href="" class="btn-default">Ver cadapio</a>
+                <a href="tel:+55996767676" class="btn-default">
+                    <i class="fa-solid fa-phone"></i> Ligue agora
+                </a>
+            </div>
 
+            <div class="social-media-buttons">
+                <a href="https://www.instagram.com/pedro_larini/" target="_blank" class="social-btn">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/brejaboteco" target="_blank" class="social-btn">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=55996767676" target="_blank" class="social-btn">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
 
+            <div class="carrossel-pratos">
+                <button id="prev-button" class="nav-btn"><i class="fa-solid fa-chevron-left"></i></button>
+
+                <div class="slider-wrapper">
+                    <div class="prato-container active">
+                        <img id="foto1" src="public/Ceviche.png" alt="Ceviche" class="girando">
+                    </div>
+
+                    <div class="prato-container">
+                        <img id="foto2" src="public/Torresmo.png" alt="Torresmo" class="girando">
+                    </div>
+
+                    <div class="prato-container">
+                        <img id="foto3" src="public/Prato feito.png" alt="Prato feito" class="girando">
+                    </div>
+                </div>
+
+                <button id="next-button" class="nav-btn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+    </main>
+    <section id="menu">
+        <h2>Nosso Cardápio</h2>
+        <p>Confira nossas deliciosas opções.</p>
+    </section>
+    <section id="reviews">
+        <h2>Avaliações</h2>
+        <p>Veja o que nossos clientes estão dizendo.</p>
+    </section>
+    </main>
 
 </body>
+<script src="script.js"></script>
 
 </html>
