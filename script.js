@@ -1,10 +1,19 @@
-$(document).ready(function () {
-    $('#mobile_btn').on('click', function () {
-        $('#mobile_menu').toggleClass('active');
-        $('#mobile_btn').find('i').toggleClass('fa-x');
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileBtn = document.getElementById('mobile_btn');
+    const mobileMenu = document.getElementById('mobile_menu');
+
+    mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        const icon = mobileBtn.querySelector('i');
+        if (mobileMenu.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-xmark');
+        } else {
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
+        }
     });
 });
-
 document.addEventListener("DOMContentLoaded", () => {
     const containers = document.querySelectorAll('.prato-container');
     const btnPrev = document.getElementById('prev-button');
